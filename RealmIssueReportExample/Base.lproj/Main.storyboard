@@ -19,23 +19,69 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRt-Pb-F4q">
-                                <rect key="frame" x="165" y="128" width="45" height="30"/>
-                                <state key="normal" title="Delete"/>
+                                <rect key="frame" x="46" y="55" width="60" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="KwH-28-GJ1"/>
+                                    <constraint firstAttribute="width" constant="60" id="niN-vT-TMT"/>
+                                </constraints>
+                                <state key="normal" title="删除"/>
                                 <connections>
                                     <action selector="deleteAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eMr-Ou-0F3"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ej-PK-KfZ">
+                                <rect key="frame" x="158" y="55" width="60" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="58l-Xi-Gx7"/>
+                                    <constraint firstAttribute="width" constant="60" id="p0f-TY-rlk"/>
+                                </constraints>
+                                <state key="normal" title="新增"/>
+                                <connections>
+                                    <action selector="addAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lle-Bc-yUN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pII-kp-Mxd">
+                                <rect key="frame" x="264" y="55" width="60" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="EQw-ud-XqD"/>
+                                    <constraint firstAttribute="height" constant="40" id="UcX-sp-MXc"/>
+                                </constraints>
+                                <state key="normal" title="整理"/>
+                                <connections>
+                                    <action selector="organizeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pgd-0z-knO"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sre-Ls-2s8">
+                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ZQ8-Un-NWS"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="3Yf-NJ-NAq"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="pRt-Pb-F4q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="108" id="YZJ-OF-7o5"/>
-                            <constraint firstItem="pRt-Pb-F4q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="165" id="dad-9k-SmR"/>
+                            <constraint firstItem="sre-Ls-2s8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="SV2-Tj-ISq"/>
+                            <constraint firstItem="pII-kp-Mxd" firstAttribute="leading" secondItem="6Ej-PK-KfZ" secondAttribute="trailing" constant="46" id="U0u-87-SJ2"/>
+                            <constraint firstItem="sre-Ls-2s8" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="WaW-DJ-12t"/>
+                            <constraint firstItem="pRt-Pb-F4q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="YZJ-OF-7o5"/>
+                            <constraint firstItem="sre-Ls-2s8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YeN-oH-3R8"/>
+                            <constraint firstItem="sre-Ls-2s8" firstAttribute="top" secondItem="pRt-Pb-F4q" secondAttribute="bottom" constant="25" id="YuT-jX-QYC"/>
+                            <constraint firstItem="pRt-Pb-F4q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="dad-9k-SmR"/>
+                            <constraint firstItem="6Ej-PK-KfZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="elk-jV-JJU"/>
+                            <constraint firstItem="6Ej-PK-KfZ" firstAttribute="leading" secondItem="pRt-Pb-F4q" secondAttribute="trailing" constant="52" id="lfW-LU-0Oc"/>
+                            <constraint firstItem="pII-kp-Mxd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="zSH-w3-wGG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="sre-Ls-2s8" id="A9S-58-MT8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="40.799999999999997" y="26.53673163418291"/>
         </scene>
     </scenes>
 </document>

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A6F2FD421CB458E00D874ED /* SortableObjectMigrationTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6F2FD321CB458E00D874ED /* SortableObjectMigrationTool.swift */; };
+		2A9A99CD21C8E50900DE9862 /* SortableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A99CC21C8E50900DE9862 /* SortableObject.swift */; };
+		2A9A99CF21C8E54100DE9862 /* IndexManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A99CE21C8E54100DE9862 /* IndexManager.swift */; };
 		2AF522B821C7B162000E8223 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF522B721C7B162000E8223 /* AppDelegate.swift */; };
 		2AF522BA21C7B162000E8223 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF522B921C7B162000E8223 /* ViewController.swift */; };
 		2AF522BD21C7B162000E8223 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AF522BB21C7B162000E8223 /* Main.storyboard */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A6F2FD321CB458E00D874ED /* SortableObjectMigrationTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortableObjectMigrationTool.swift; sourceTree = "<group>"; };
+		2A9A99CC21C8E50900DE9862 /* SortableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortableObject.swift; sourceTree = "<group>"; };
+		2A9A99CE21C8E54100DE9862 /* IndexManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexManager.swift; sourceTree = "<group>"; };
 		2AF522B421C7B162000E8223 /* RealmIssueReportExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmIssueReportExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AF522B721C7B162000E8223 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AF522B921C7B162000E8223 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +46,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A9A99CB21C8E4A000DE9862 /* SortableObjectForRealm */ = {
+			isa = PBXGroup;
+			children = (
+				2A9A99CC21C8E50900DE9862 /* SortableObject.swift */,
+				2A9A99CE21C8E54100DE9862 /* IndexManager.swift */,
+				2A6F2FD321CB458E00D874ED /* SortableObjectMigrationTool.swift */,
+			);
+			path = SortableObjectForRealm;
+			sourceTree = "<group>";
+		};
 		2AF522AB21C7B162000E8223 = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +77,7 @@
 		2AF522B621C7B162000E8223 /* RealmIssueReportExample */ = {
 			isa = PBXGroup;
 			children = (
+				2A9A99CB21C8E4A000DE9862 /* SortableObjectForRealm */,
 				2AF522B721C7B162000E8223 /* AppDelegate.swift */,
 				2AF522B921C7B162000E8223 /* ViewController.swift */,
 				2AF522BB21C7B162000E8223 /* Main.storyboard */,
@@ -203,8 +220,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A9A99CF21C8E54100DE9862 /* IndexManager.swift in Sources */,
 				2AF522BA21C7B162000E8223 /* ViewController.swift in Sources */,
 				2AF522B821C7B162000E8223 /* AppDelegate.swift in Sources */,
+				2A6F2FD421CB458E00D874ED /* SortableObjectMigrationTool.swift in Sources */,
+				2A9A99CD21C8E50900DE9862 /* SortableObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
