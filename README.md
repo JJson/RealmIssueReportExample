@@ -25,12 +25,12 @@ realm对这种未指定顺序的处理方式是，删掉C，然后取最后一�
 
 1.把原先继承于Object的类改为继承于SortableObject
 
-2.如需从旧数据迁移，则把realm的配置中的版本号schemaVersion提高：
-  config.schemaVersion = 2
+2.如需从旧数据迁移，则把realm的配置中的版本号schemaVersion提高
+config.schemaVersion = 2
 
-3.注册继承于SortableObject的类型：
-  SortableObjectMigrationTool.shared.register(class: Dog.self)
+3.注册继承于SortableObject的类型
+SortableObjectMigrationTool.shared.register(class: Dog.self)
 
-4.设置迁移工具，并尝试触发数据迁移（如版本号schemaVersion没升高则不会触发）：
-  SortableObjectMigrationTool.shared.setupAndMigration(for: config)
+4.设置迁移工具，并尝试触发数据迁移（如版本号schemaVersion没升高则不会触发）
+SortableObjectMigrationTool.shared.setupAndMigration(for: config)
 
