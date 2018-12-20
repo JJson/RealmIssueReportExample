@@ -42,7 +42,8 @@ class ViewController: UIViewController {
             let oneHundredMB = 100 * 1024 * 1024
             return (totalBytes > oneHundredMB) && (Double(usedBytes) / Double(totalBytes)) < 0.8
         }
-        config.schemaVersion = 2
+        config.schemaVersion = 2 //增长版本号
+        //设置和出发旧数据迁移
         SortableObjectMigrationTool.shared.register(class: Dog.self)
         SortableObjectMigrationTool.shared.setupAndMigration(for: config)
 
