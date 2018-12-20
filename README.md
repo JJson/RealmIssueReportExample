@@ -19,5 +19,5 @@
 
 3.注册继承于SortableObject的类型：SortableObjectMigrationTool.shared.register(class: Dog.self)
 
-4.设置迁移工具，并尝试触发数据迁移（如版本号schemaVersion没变化则不会触发）：SortableObjectMigrationTool.shared.setupAndMigration(for: config)
+4.设置迁移工具，并尝试触发数据迁移（如版本号schemaVersion没升高则不会触发）：SortableObjectMigrationTool.shared.setupAndMigration(for: config)
 
